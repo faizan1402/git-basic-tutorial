@@ -1,0 +1,71 @@
+# SOME BASIC IMPORTANT COMMAND
+#git intit (Means track  all the files git
+#git status
+#git add --a (this form is possible)
+#git add ( Means when your file untrack then you are track any file to use git add command)
+#git commit (git commit means any changes the file so means how many insert the new changes or deletion)
+#git remote  git url( means when your local file  to git hub server  then git remote command
+#git push  -u master origin 
+#git pull -u origin master (means any other branch of code of is merge in parent branch (master) branch)
+
+ # How to pull request so simple before merging the branch before any other branch name changes and commit that branch
+ 
+and after that branch is merge .      
+
+# git ignore (git ignore means when git add and file is add and commit but file is not direct commit then used as git ignore command
+  so basically .
+
+   # How to ignore extra file -
+
+
+# simple touch .gitignore file used and 
+Example suppose my ab.c file extra generate so simple ab file inside gitignore file is save and then git status check and not show ab file so this command ignore the file
+  means gitignore file inside ab file so ab file is ignore
+
+But suppose lots file is show and see this type file simple -file ignore 
+Example - means suppose  a.c,b.c,ab.c,ac.c so i want to ignore .c file so simple
+  Inside gitignore file all dot c (.c) file only ( * .c) this form represent then ignore all files very simple command
+and save gitignore file and at commit time not show (.c )file git file 
+
+# Suppose you want to ignore directory so simple this command - Directory ignore
+ inside gitignore file only this command (dir /) (means ignore the dir folder) simple this command 
+
+All folder ignore but only outer folder ignore then simple (/dir )this command used and inner folder is tracked and 
+outer folder is untracked.
+
+#   How to used git diff command
+
+# git diff command basically staging area and working directory of compare the file.staging area red color and green 
+color is working directory.
+# When  git add and afterthat press git status , so all file is staging area and working directory is same 
+ then no any modified file possible so git diff not any modified file show
+ 
+Example - Means suppose any file is add then afterthat git status and check and file is staging area 
+means all file is green color is show so all file is staging area and git diff is not run because all file is 
+staging area already present .
+
+
+
+Imp point- #git diff -- basically compare previous commit and current staging area.
+
+
+ 
+  # How to git staging area to skipp 
+  # git commit -a -m  "Any quotes can write" This is command (-a -m ) commit
+  Means We want to staging area file (green color file  commit is skipp so
+ 
+  so simple command git commit -a -m "Any commit pass" so this command 
+  basically skipp the commit.means this command basically any tracked file is skipp or commit the track file
+  and untrack file will not commit . Means that you are required commit is changes and other wise skipp the commit 
+ this commnd through. 
+
+#git log is show the all commit file (history is showing) 
+
+# How to unstagge file( untracked file ).
+ 
+# git restore -- stagged file name .
+
+# How to previous file commit merge stagging file (current file) .
+
+#git checkout -- file name
+ 
