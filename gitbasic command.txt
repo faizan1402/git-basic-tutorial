@@ -7,7 +7,7 @@
 #git remote  git url( means when your local file  to git hub server  then git remote command
 #git push  -u master origin 
 #git pull -u origin master (means any other branch of code of is merge in parent branch (master) branch)
-
+# git pull (changes the commit)
  # How to pull request so simple before merging the branch before any other branch name changes and commit that branch
  
 and after that branch is merge .      
@@ -15,8 +15,7 @@ and after that branch is merge .
 # git ignore (git ignore means when git add and file is add and commit but file is not direct commit then used as git ignore command
   so basically .
 
-   # How to ignore extra file -
-
+# How to ignore extra file -
 
 # simple touch .gitignore file used and 
 Example suppose my ab.c file extra generate so simple ab file inside gitignore file is save and then git status check and not show ab file so this command ignore the file
@@ -67,5 +66,93 @@ Imp point- #git diff -- basically compare previous commit and current staging ar
 
 # How to previous file commit merge stagging file (current file) .
 
-#git checkout -- file name
+# git checkout -- file name
+
+  # How to git v   
+
+# How to create git branch  
+ git branch  (command basically check the which branch currently)
+
+ git checkout thirsty (switch the branch)
+
+  git branch 
+
+   master
+   thirsty
+
+   Merge two branches
+
+    My default branch is master
+    and current branch is any branch suppose thirsty branch add
+
+  git merge thirsty 
+
+  and commit : wq and enter
+  then branch are merge
+
+so default branch is master branch merge 
+ 
+ suppose merge master branch in thirsty current branch 
+
+
+   
+  # See What Branch You're On
+   git status
+  # List All Branches
+   NOTE: The current local branch will be marked with an asterisk (*).
+    To see local branches, run this command:
+   command-> git branch
+  # To see remote branches, run this command
+   command-> git branch -r
+  # To see all local and remote branches, run this command
+   command-> git branch -a
+  # Create a New Branch
+     Run this command (replacing my-branch-name with whatever name you want)
+    command -> git checkout -b my-branch-name
+     ->You're now ready to commit to this branch.
+  # Switch to a Branch In Your Local Repo:
+    -> Run this command:
+    commad -> git checkout my-branch-name
+  # Switch to a Branch That Came From a Remote Repo
+  1) To get a list of all branches from the remote, run this command:
+   command-> gitpull
+  # Run this command to switch to the branch
+    git checkout --track origin/my-branch-name
+  # Push to a Branch
+    -> If your local branch does not exist on the remote, run either of these commands
+    command-> git push -u origin my-branch-name
+    command ->git push -u origin HEAD
+  # NOTE: HEAD is a reference to the top of the current branch, so it's an easy way to push to a branch of the 
+   same name on the remote. This saves you from having to type out the exact name of the branch!NOTE:
+   HEAD is a reference to the top of the current branch, so it's an easy way to push to a branch of the 
+  same name on the remote.
+   ->If your local branch already exists on the remote, run this command
+           git push
+    #  Merge a Branch :
+     -> 1)You'll want to make sure your working tree is clean and see what branch you're on. Run this command.
+       command->git status
+    -> 2) First, you must check out the branch that you want to merge another branch into 
+      (changes will be merged into this branch). If you're not already on the desired branch, run this command
+    -> command->git checkout master
+   NOTE: Replace master with another branch name as needed
+   -> 3)Now you can merge another branch into the current branch. Run this command.
+      command ->git merge my-branch-name
+   -> 4) NOTE: When you merge, there may be a conflict. Refer to Handling Merge Conflicts 
+        (the next exercise) to learn what to do.
+   # Delete Branches:
+     ->To delete a remote branch, run this command
+     command->git push origin --delete my-branch-name
+     ->To delete a local branch, run either of these commands
+    command->git branch -d my-branch-name
+    command->git branch -D my-branch-name
+   # NOTE: The -d option only deletes the branch if it has already been merged. 
+    The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.
+     
+This saves you from having to type out the exact name of the branch!  
+
+ 
+
+
+   
+
  
