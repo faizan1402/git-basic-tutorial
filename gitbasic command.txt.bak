@@ -151,79 +151,9 @@ so default branch is master branch merge
      
 This saves you from having to type out the exact name of the branch!  
 
-
-# How to overwrite local changes with git pull
-  1) Stash local changes: $ git stash
-  2) Pull changes from remote $ git pull
- -> If you want to retrive your changes just do : $ git stash apply
-
-# git remove untracked files: delete untracked files from working tree
--> When having unnecessary files and dirs in your own local copy of a repository,and you want to delete
-those files,in opposed to just ignore them(with.gitignore),you can use git clean to remove all files which are not tracked by git.
- # How to remove untracked files and directory
-  1) Start wth a dry run to see what will be deleted $ git clean -n-d
-  2) After you are sure,run the git clean command with-f flag: $ git clean-f-d
- # Git Tip: Instead of untracking files,a good practice is to prevent those files from being tracked in the first place by using.gitignore file.
-
-# git unstage : unstage file from index:
--> When  you re adding files ($git add) to the working tree,you are adding them to the stagging area,meaning you are staging them.if you want Git
-to stop tracking specific files on the working tree,you need to remove them from your stage files (.git/index)
- # How to unstage file(s) from index:
-  -> keep the file but it from the index:
-   -> $ git rm --cached<file-name>
-   -> To leave the entire working tree untracked,unstage all files(clear your index):$ git reset
-   -> git reset rm <file-name>
-   -> You can also untrack files which already added to git repository based on .gitignore.
  
-# Git Undo Merge : abort (cancel) a merge after ut happened
--> Sometimes you get in a situation (we 've all been there) where you merged branches and realize you need to undo the merge
-because you do n't want to release the code you just merged.
-  
-  1) Checked to the master branch :$ git checkout master
-  2) Run git log and get the id of the merge commit: $ git log --oneline
-  3) Revert merge by commit id:$ git revert -m <merge-commit-id>
-  4) Commit the revert and push changes to the remote repo: You can start putting on your packer face and pretend "nothing's happened".
 
- # Git Remove File: Remove file(s) from a commit on remote:
- You wish to delete a file(or files) on remote,maybe because it is deprecated or because this file not supported to be there in the first
- place.so,you wonder,what is the protocol to delete files from a remote git repository
 
- 1) Remove your file(s)0:$ git rm <file-A> <file-B><file-C>
- 2) Commit your changes: $ git commit -m "removing files"
- 3) Push you changes to git:$ git push
-
-# Git Uncommit:Undo the last commit
-You made a commit but now you regret it.May be you committed secrets by accident -not a good idea -or maybe you want
-to add more tests to your code changes.these are all legit reasons to undo your last commit.
-
-# How to uncommit (undo) the last commit:
-  1) To keep the changes from the commit you want to undo :$ git reset --soft HEAD^
-  2) To destroy the changes from the commit you want to undo: $ git reset --hard HEAD^
- 
- 2) GIt Tip: git pre-commit hook is a built-in feature that lets you defines scripts that will run automatically before each commit.Use
- to reduce the need to cancel commits.
-
-# Git diff between branches:When you are working with multiple git branches,it's important to be able to compare and contrast the differences
-between two different branches on the same repository.You can do this using the $ git diff command.
-
-# How to get the diff between two branches 
-  1) Find the diff between the tips of the two branches : $ git diff branch_1....branch_2
-  2) Produce the diff between two branches from common ancestor commit: $ git diff branch_1 ....branch_2
-  3) Comparing files between branches:$ git diff branch1:file branch2:file
-
- 4) Git Tip: dff-so-fancy is a great open source solution to make your diffs human readable.
-
-# Git Delete Tag: Remove a tag from branch 
- In the case of a "buggy" release,you probably don't want someone to accidentally use the release linked to this tag.
-
- 1) If you want  a remote tag <tag-name> to delete.and your remote is origin,then simply: $ git push origin:refs/tags/<tag-name>
- 2) If you also need to delete the tag locally: $ git tag-d <tag-name>
-
-# How to rename branch name after it was created
-  1) Checkout to the branch you need to rename: $ git checkout <old-name>
-  2) Rename branch name locally : $ git branch -m  <new-name>
-  3) Delete old branch fron remote: $ git push origin:<old-name><new-name>
-  4) Reset the upstrean branch for the new branch name:$ git push origin -u <new-name>
-
+   
 
  
