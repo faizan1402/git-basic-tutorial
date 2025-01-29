@@ -1,11 +1,11 @@
 # SOME BASIC IMPORTANT COMMAND
-#git intit (Means track  all the files git
+#git init (Means track  all the files git
 #git status
 #git add --a (this form is possible)
 #git add ( Means when your file untrack then you are track any file to use git add command)
 #git commit (git commit means any changes the file so means how many insert the new changes or deletion)
 #git remote  git url( means when your local file  to git hub server  then git remote command
-#git push  -u master origin 
+#git push  -u origin master 
 #git pull -u origin master (means any other branch of code of is merge in parent branch (master) branch)
 # git pull (changes the commit)
  # How to pull request so simple before merging the branch before any other branch name changes and commit that branch
@@ -13,13 +13,13 @@
 and after that branch is merge .      
 
 # git ignore (git ignore means when git add and file is add and commit but file is not direct commit then used as git ignore command
-  so basically .
+  so basically.
 
 # How to ignore extra file -
 
 # simple touch .gitignore file used and 
-Example suppose my ab.c file extra generate so simple ab file inside gitignore file is save and then git status check and not show ab file so this command ignore the file
-  means gitignore file inside ab file so ab file is ignore
+Example suppose my ab.c file extra generate so simple file inside gitignore file is save and then git status check and not show ab file so this command ignore the file
+  means gitignore file inside file so file is ignore
 
 But suppose lots file is show and see this type file simple -file ignore 
 Example - means suppose  a.c,b.c,ab.c,ac.c so i want to ignore .c file so simple
@@ -153,8 +153,15 @@ This saves you from having to type out the exact name of the branch!
 
 
 # How to overwrite local changes with git pull
+
+What is git stash?
+git stash is a Git command that temporarily saves uncommitted changes so that you can switch branches or work on something else without losing your progress. It allows you to return to those changes later.
   1) Stash local changes: $ git stash
-  2) Pull changes from remote $ git pull
+     git stash -> basically if changes any file so without commit can move to another branch
+  -> git stash ->Enter directly commited id and then directly move to another branch like -> git checkout <branch name> -> switched the branch
+  -> git stash list -> basically all the files modified without commits untracking and tracking files can use this command and all files automatically commited
+  2) git stash pop applies the stash and removes it from history (git pop) command
+  3) Pull changes from remote $ git pull
  -> If you want to retrive your changes just do : $ git stash apply
 
 # git remove untracked files: delete untracked files from working tree
